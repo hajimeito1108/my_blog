@@ -3,9 +3,10 @@ import Image from 'next/image'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import Header from './header';
 
-const name = '[Your Name]'
-export const siteTitle = 'Next.js Sample Website'
+const name = 'Ito Hajime'
+export const siteTitle = 'Ito Hajime Blog App using Next.js'
 
 export default function Layout({
   children,
@@ -36,7 +37,7 @@ export default function Layout({
           <>
             <Image
               priority
-              src="/images/profile.jpg"
+              src="/images/glifith_comical.jpeg"
               className={utilStyles.borderCircle}
               height={144}
               width={144}
@@ -50,7 +51,7 @@ export default function Layout({
               <a>
                 <Image
                   priority
-                  src="/images/profile.jpg"
+                  src="/images/glifith_comical.jpeg"
                   className={utilStyles.borderCircle}
                   height={108}
                   width={108}
