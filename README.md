@@ -1,1 +1,8 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+## 概要
+Next.js(TypeScript)のチュートリアルにmicroCMSを組み込んだブログサイト
+
+## 今後の課題
+・tagを追加
+・UIをもっとリッチに
+・headerを追加し、カテゴリを追加してblog以外も見れる個人サイトにする
+・お問い合わせフォームを作る
