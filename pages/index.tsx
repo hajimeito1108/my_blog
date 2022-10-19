@@ -10,7 +10,7 @@ export default function Home({
   allPostsData
 }: {
   allPostsData: {
-    date: string
+    createdAt: string
     title: string
     id: string
   }[]
@@ -29,14 +29,14 @@ export default function Home({
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
+          {allPostsData.map(({ id, createdAt, title }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
               <br />
               <small className={utilStyles.lightText}>
-                <Date dateString={date} />
+                <Date dateString={createdAt} />
               </small>
             </li>
           ))}
@@ -47,7 +47,7 @@ export default function Home({
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData()
+  const allPostsData = await getSortedPostsData()
   return {
     props: {
       allPostsData
